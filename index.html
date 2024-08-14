@@ -6,20 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <ul><a href="#">Home</a></ul>
-                <ul><a href="#">About</a></ul>
-                <ul><a href="#">Services</a></ul>
-                <ul><a href="#">Portfolio</a></ul>
-                <ul><a href="#">Contact</a></ul>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </nav>
+            <div class="header-text">
+                <p>Developer</p>
+                <h1>Hi, I'm <span>Nkosingiphile</span><br> Phungula from Durban</h1>
+            </div>
+        </div>
+    </div>
+
+    <!------------ about section-------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/myphoto.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem quas accusantium fugit repellat
+                    eveniet doloribus, temporibus suscipit officia repellendus minus soluta dolorem, iusto explicabo
+                    deserunt accusamus ut eius totam voluptatem?
+
+                    <div class="tab-title">
+                        <div class="tab-links active-link" onclick="opentab('Skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+
+                    </div>
+                    <div class="tab-content active-tab" id="Skills">
+                        <ul>
+                            <li><span>Developer</span><br>develop software systems</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>Developer</span><br>develop software systems</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>gelekedle </span><br>develop software systems</li>
+                            <li><span>dut</span><br>develop software systems</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<script>
+var tablinks=document.getElementsByClassName("tab-links");
+var tabcontents=document.getElementsByClassName("tab-content");
 
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
 </html>
