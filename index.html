@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#"> <img src="images/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Developer</p>
+                <h1>Hi, I'm <span>Nkosingiphile</span><br> Phungula from Durban</h1>
+            </div>
+        </div>
+    </div>
+
+    <!------------ about section-------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/myphoto.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem quas accusantium fugit repellat
+                    eveniet doloribus, temporibus suscipit officia repellendus minus soluta dolorem, iusto explicabo
+                    deserunt accusamus ut eius totam voluptatem?
+
+                    <div class="tab-title">
+                        <div class="tab-links active-link" onclick="opentab('Skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+
+                    </div>
+                    <div class="tab-content active-tab" id="Skills">
+                        <ul>
+                            <li><span>Software Developer</span><br>develop software systems</li>
+                            <li><span>web Developer</span><br>develop web apps</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>Developer</span><br>develop software systems</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>2021-Present</span><br>Durban university of technology </li>
+                            <li><span>matriculated</span><br>Gelekedle High School</li>
+                            <li><span>Developer</span><br>develop software systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
