@@ -88,7 +88,7 @@
             <div class="servies-list">
                 <div>
                     <h1>Web Development </h1>
-                    <p>LI offer comprehensive web development services, including custom website design and development.
+                    <p>I offer comprehensive web development services, including custom website design and development.
                         From building responsive, user-friendly interfaces to integrating advanced functionalities, I
                         ensure your web presence stands out and meets your business goals.
                     </p>
@@ -119,12 +119,17 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/nkosie.jpg">
+                    <img src="images/blogImage.jpg">
                     <div class="layer">
-                        <h3>Social media</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquid incidunt ipsum
-                            similique nam amet officiis! Enim quae a perspiciatis. Repellat cupiditate recusandae illo,
-                            ea deserunt sint sed consequatur deleniti.</p>
+                        <h3>Blog web application</h3>
+                        <p>This blog web application, built using Python Flask and SQLite, showcases core web
+                            development skills by providing user authentication, blog management, and dynamic content
+                            handling. Users can sign up, log in, and create, view, and delete their blog posts. The
+                            application leverages Flask’s routing capabilities, SQLite for data storage, and Flask-Login
+                            for session management, demonstrating a practical implementation of CRUD operations and user
+                            authentication. Its structured design, including separate files for routes, models, and
+                            forms, ensures maintainability and scalability, making it an excellent example of a
+                            full-stack web application for a portfolio.</p>
                         <a href="#"></a>
                     </div>
                 </div>
@@ -165,16 +170,17 @@
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-faecbook"></i></a>
                         <a href="https://github.com/Nkosingiphilee/Nkosingiphilee"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/nkosingiphile-phungula/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/nkosingiphile-phungula/"><i
+                                class="fab fa-linkedin"></i></a>
                         <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
                     </div>
                     <a href="images/logo.png" download="NkosingiphileCv" class="btn btn2">Download cv</a>
                 </div>
                 <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form onsubmit="submitMessage(event)">
+                        <input type="text" name="Name" placeholder="Your Name"  id="name">
+                        <input type="email" name="email" placeholder="Your email"  id="email">
+                        <textarea name="Message" rows="6" placeholder="Your Message" id="Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
