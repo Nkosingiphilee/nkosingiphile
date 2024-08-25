@@ -17,13 +17,15 @@
         <div class="container">
             <nav>
                 <a href="#"> <img src="images/logo.png" alt=""></a>
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Developer</p>
@@ -180,8 +182,12 @@
                     <form onsubmit="submitMessage(event)">
                         <input type="text" name="Name" placeholder="Your Name"  id="name">
                         <input type="email" name="email" placeholder="Your email"  id="email">
+                        <span class="hidden none email html-element" id="email-span">Email is invalid</span>
+                        <input type="text" name="subject" placeholder="Subject"  id="subject" defaul="Message from Portfolio">
                         <textarea name="Message" rows="6" placeholder="Your Message" id="Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <span class="hidden" id="message-span">Message is invalid</span>
+                        <br>
+                        <button type="submit" class="btn btn2" id="formbtn">Submit</button>
                     </form>
                 </div>
             </div>

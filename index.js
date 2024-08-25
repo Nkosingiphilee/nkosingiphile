@@ -21,21 +21,21 @@ function submitMessage(event){
     const input_name=document.getElementById("name");
     const input_email=document.getElementById("email");
     const input_message=document.getElementById("Message");
+    const input_subject=document.getElementById("subject");
 
     const isNameValid=input_name.value.trim() !=='';
     const isEmailValid=input_email.value.trim() !=='' && input_email.validity.valid;
     let isMessageValid=input_message.value.trim() !=='';
 
     const isFormValid=isNameValid && isEmailValid && isMessageValid
-    alert(isFormValid)
 
     if (isFormValid) {
         const formData = new FormData(event.target)
         console.log(formData);
-        fetch('https://formspree.io/f/mayraako',
+        fetch('',
             {
                 method: 'POST',
-                body: formData,
+                body: formData, 
                 headers: {
                     'Accept': 'application/json'
                 }
@@ -48,9 +48,34 @@ function submitMessage(event){
                 }
             })
 
+            input_name.value = '';
+            input_email.value = '';
+            input_message.value = '';
+            input_subject.value = '';
+            document.getElementById('formbtn').remove();
 
-    }else{
-        alert("is invalid")
+    }else {
+
+        if (isEmailValid !== true) {
+            const emailSpan = document.getElementById('email-span')
+            emailSpan.classList.remove('hidden')
+        }
+        if (isMessageValid !== true) {
+            const messageSpan = document.getElementById('message-span')
+            messageSpan.classList.remove('hidden')
+        }
     }
 
+}
+
+
+
+var sidemenu=document.getElementById('sidemenu')
+
+function openmenu(){
+    sidemenu.style.right="0";
+}
+
+function closemenu(){
+    sidemenu.style.right="-200px";
 }
