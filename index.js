@@ -30,8 +30,7 @@ function submitMessage(event){
     const isFormValid=isNameValid && isEmailValid && isMessageValid
 
     if (isFormValid) {
-        const formData = new FormData(event.target)
-        console.log(formData);
+        const formData = new FormData(event.target) 
         fetch('',
             {
                 method: 'POST',
