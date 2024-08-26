@@ -46,12 +46,7 @@ function submitMessage(event){
                     alert('Email successfully sent')
                 }
             })
-
-            input_name.value = '';
-            input_email.value = '';
-            input_message.value = '';
-            input_subject.value = '';
-            document.getElementById('formbtn').remove();
+            document.querySelector('form').reset(); 
 
     }else {
 
@@ -64,7 +59,6 @@ function submitMessage(event){
             messageSpan.classList.remove('hidden')
         }
     }
-
 }
 
 
