@@ -31,7 +31,7 @@ function submitMessage(event){
 
     if (isFormValid) {
         const formData = new FormData(event.target) 
-        fetch('',
+        fetch('https://formspree.io/f/mayraako',
             {
                 method: 'POST',
                 body: formData, 
@@ -46,6 +46,8 @@ function submitMessage(event){
                     alert('Email successfully sent')
                 }
             })
+            document.getElementById('email-span').classList.add('hidden')
+            document.getElementById('message-span').classList.add('hidden')
             document.querySelector('form').reset(); 
 
     }else {
