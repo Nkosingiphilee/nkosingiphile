@@ -98,11 +98,15 @@ nav ul li a:hover::after {
 
 .about-col-1 {
     flex-basis: 35%;
+    perspective: 1000px;
 }
 
 .about-col-1 img {
     width: 100%;
     border-radius: 15px;
+}
+.about-col-1 img:hover {
+   transform: rotateY(40deg);
 }
 
 .about-col-2 {
@@ -191,9 +195,15 @@ nav ul li a:hover::after {
     margin-bottom: 15px;
 }
 
+.servies-list:has(div:hover)>div:not(:hover) {
+opacity: .10;
+background: #ff004f;
+transform: translate(-10);
+}
+
 .servies-list div:hover {
     background: #ff004f;
-    transform: translate(-10);
+    transform: scale(1.2)
 }
 
 /* portfolio*/
@@ -283,6 +293,7 @@ nav ul li a:hover::after {
 .btn:hover {
 
     background: #ff004f;
+
 }
 
 /*contact*/
@@ -320,13 +331,20 @@ nav ul li a:hover::after {
 .social-icons a:hover {
     color: #ff004f;
     transform: translateY(-5px);
-
+    transform: scale(1.5);
 }
 
 
 .btn.btn2 {
     display: inline-block;
     background: #ff004f;
+    transition: 0.3s;
+}
+
+.btn.btn2:hover {
+    background: #6e0325;
+    transform: scale(1.2);
+
 }
 
 .contact-right form {
@@ -450,4 +468,8 @@ nav .fa-solid {
     .copright{
         font-size: 14px;
     }
+}
+
+.text{
+    color: #ec7a9e;
 }

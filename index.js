@@ -1,12 +1,12 @@
-var tablinks=document.getElementsByClassName("tab-links");
-var tabcontents=document.getElementsByClassName("tab-content");
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-content");
 
-function opentab(tabname){
-    for(tablink of tablinks){
+function opentab(tabname) {
+    for (tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
 
-    for(tabcontent of tabcontents){
+    for (tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
 
@@ -16,25 +16,25 @@ function opentab(tabname){
 
 
 
-function submitMessage(event){
+function submitMessage(event) {
     event.preventDefault()
-    const input_name=document.getElementById("name");
-    const input_email=document.getElementById("email");
-    const input_message=document.getElementById("Message");
-    const input_subject=document.getElementById("subject");
+    const input_name = document.getElementById("name");
+    const input_email = document.getElementById("email");
+    const input_message = document.getElementById("Message");
+    const input_subject = document.getElementById("subject");
 
-    const isNameValid=input_name.value.trim() !=='';
-    const isEmailValid=input_email.value.trim() !=='' && input_email.validity.valid;
-    let isMessageValid=input_message.value.trim() !=='';
+    const isNameValid = input_name.value.trim() !== '';
+    const isEmailValid = input_email.value.trim() !== '' && input_email.validity.valid;
+    let isMessageValid = input_message.value.trim() !== '';
 
-    const isFormValid=isNameValid && isEmailValid && isMessageValid
+    const isFormValid = isNameValid && isEmailValid && isMessageValid
 
     if (isFormValid) {
-        const formData = new FormData(event.target) 
+        const formData = new FormData(event.target)
         fetch('https://formspree.io/f/mayraako',
             {
                 method: 'POST',
-                body: formData, 
+                body: formData,
                 headers: {
                     'Accept': 'application/json'
                 }
@@ -46,11 +46,11 @@ function submitMessage(event){
                     alert('Email successfully sent')
                 }
             })
-            document.getElementById('email-span').classList.add('hidden')
-            document.getElementById('message-span').classList.add('hidden')
-            document.querySelector('form').reset(); 
+        document.getElementById('email-span').classList.add('hidden')
+        document.getElementById('message-span').classList.add('hidden')
+        document.querySelector('form').reset();
 
-    }else {
+    } else {
 
         if (isEmailValid !== true) {
             const emailSpan = document.getElementById('email-span')
@@ -65,12 +65,20 @@ function submitMessage(event){
 
 
 
-var sidemenu=document.getElementById('sidemenu')
+var sidemenu = document.getElementById('sidemenu')
 
-function openmenu(){
-    sidemenu.style.right="0";
+function openmenu() {
+    sidemenu.style.right = "0";
 }
 
-function closemenu(){
-    sidemenu.style.right="-200px";
+function closemenu() {
+    sidemenu.style.right = "-200px";
 }
+
+var typed = new Typed(".text", {
+    strings: ['Fullstack Developer', 'Backend Developer','Frontend Developer','Junior software Developer'],
+    typespeed: 100,
+    backspeed: 100,
+    backDelay: 1000,
+    loop: true
+});
